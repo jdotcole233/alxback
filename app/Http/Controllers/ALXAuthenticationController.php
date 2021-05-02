@@ -11,7 +11,7 @@ class ALXAuthenticationController extends Controller
 {
     public function alx_register(Request $request)
     {
-        $validation_rules =[
+        $validation_rules = [
             'name' => 'required',
             'email' => 'email|required|unique:users',
             'password' => 'required|confirmed'
@@ -30,7 +30,7 @@ class ALXAuthenticationController extends Controller
 
        return response()->json([
            'user' => $user_created,
-           'access_toekn' => $access_token
+           'access_token' => $access_token
        ]);
     }
 
